@@ -30,9 +30,14 @@ function viewCart() {
     return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice} and ${cart[1].itemName} at $${cart[1].itemPrice}.`;
   } else {
     var cartStr = "In your cart, you have ";
-    for(var i = 0; i<cart.length; i++){
-      
+    for (var i = 0; i < cart.length; i++) {
+      if (i != cart.length - 1) {
+        cartStr += `${cart[i].itemName} at $${cart[i].itemPrice}, `;
+      } else {
+        cartStr += `and ${cart[i].itemName} at $${cart[i].itemPrice}.`;
+      }
     }
+    return cartStr;
   }
 }
 
