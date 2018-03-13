@@ -33,11 +33,9 @@ function viewCart() {
     for (var i = 0; i < cart.length; i++) {
       if (i < cart.length - 2) {
         cartStr += `${cart[i].itemName} at $${cart[i].itemPrice}, `;
-      } 
-      else if (i == cart.length - 2){
+      } else if (i == cart.length - 2) {
         cartStr += `${cart[i].itemName} at $${cart[i].itemPrice} `;
-      }
-      else {
+      } else {
         cartStr += `and ${cart[i].itemName} at $${cart[i].itemPrice}.`;
       }
     }
